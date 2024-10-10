@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div class="container">
+     <h1>Concert Ticket Booking </h1>
+     <p id="message" style="color: red; text-align: center;"  ></p>
+        <form id="bookingForm">
+         
+            <label for="concert">Select a Concert Date and Venue:</label>
+            <select id="concert" required>
+                <option value="">Select Concert</option>
+                <option value="October 15, 2024 - London">October 15, 2024 - London</option>
+                <option value="November 10, 2024 - New York">November 10, 2024 - New York</option>
+                <option value="December 5, 2024 - Sydney">December 5, 2024 - Sydney</option>
+            </select>
+
+            <label for="ticketType">Select Ticket Type:</label>
+            <select id="ticketType" required>
+                <option value="">Select Ticket Type</option>
+                <option value="General Admission">General Admission ($80)</option>
+                <option value="VIP">VIP ($150)</option>
+            </select>
+
+            <label for="ticketQuantity">Select Ticket Quantity:</label>
+            <input type="number" id="ticketQuantity" min="1" value="1" required>
+            <button type="submit" id="confirmBooking">Confirm Booking</button>
+        </form>
+
+
+        <div id="errorMessage" class="error"></div>
+        <div id="bookingSummary" class="summary" style="display:none;">
+            <h2>Booking Summary</h2>
+            <p>Concert: <span id="summaryConcert"></span></p>
+            <p>Ticket Type: <span id="summaryTicketType"></span></p>
+            <p>Quantity: <span id="summaryQuantity"></span></p>
+            <p>Total Price: $<span id="summaryTotalPrice"></span></p>
+           
+         
+        </div>
+ 
+        
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
